@@ -1,0 +1,56 @@
+# Metrics Cops
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 200 lines of code.'
+  Max: 200
+  Enabled: true
+
+Metrics/ModuleLength:
+  Description: 'Avoid modules longer than 200 lines of code.'
+  Max: 200
+  Enabled: true
+
+Metrics/ParameterLists:
+  Description: 'Pass no more than four parameters into a method.'
+  Max: 4
+  Enabled: true
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 50 lines of code.'
+  StyleGuide: '<https://github.com/bbatsov/ruby-style-guide#short-methods>'
+  Max: 50
+  Enabled: true
+
+# Offense count: 2
+# Configuration parameters: IgnoredMethods, CountRepeatedAttributes.
+Metrics/AbcSize:
+  Max: 28
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 50
+  IgnoredMethods:
+    - context
+    - describe
+    - it
+    - shared_examples
+    - shared_examples_for
+    - namespace
+    - draw
+    - configure
+    - group
+
+# Offense count: 2
+# Configuration parameters: AllowedConstants.
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'reward_system.rb'
+    - 'rule.rb'
+
+
+# Offense count: 2
+Style/ClassVars:
+  Exclude:
+    - 'rule.rb'

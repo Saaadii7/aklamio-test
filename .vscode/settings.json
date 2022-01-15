@@ -1,0 +1,21 @@
+{
+    "editor.tabSize": 2,
+    "html.format.indentHandlebars": true,
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "Default Dark+",
+    "explorer.confirmDelete": false,
+    "redhat.telemetry.enabled": true,
+    "editor.codeActionsOnSave": {
+        "ruby.rubocopAutocorrect": true
+    },
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "yaml.schemas": {
+        "file:///home/saaad/.vscode/extensions/atlassian.atlascode-2.10.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "workbench.iconTheme": "vscode-great-icons",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2500,
+    "ruby.rubocop.onSave": true
+}
