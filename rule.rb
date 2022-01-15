@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # rule.rb
+# No validation for rule attribs
 
 class Rule
   attr_reader :id, :type, :threshold

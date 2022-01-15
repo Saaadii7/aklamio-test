@@ -1,9 +1,16 @@
-example_id                   | status | run_time        |
----------------------------- | ------ | --------------- |
-./spec/rule_spec.rb[1:1:1]   | passed | 0.0003 seconds  |
-./spec/rule_spec.rb[1:2:1:1] | passed | 0.00006 seconds |
-./spec/rule_spec.rb[1:2:2:1] | passed | 0.00006 seconds |
-./spec/rule_spec.rb[1:2:3:1] | passed | 0.00007 seconds |
-./spec/rule_spec.rb[1:3:1:1] | passed | 0.00081 seconds |
-./spec/rule_spec.rb[1:3:2:1] | passed | 0.00006 seconds |
-./spec/rule_spec.rb[1:4:1]   | passed | 0.00095 seconds |
+example_id                            | status | run_time        |
+------------------------------------- | ------ | --------------- |
+./spec/reward_system_spec.rb[1:1:1]   | passed | 0.00114 seconds |
+./spec/reward_system_spec.rb[1:1:2]   | passed | 0.00006 seconds |
+./spec/reward_system_spec.rb[1:2:1]   | passed | 0.00666 seconds |
+./spec/reward_system_spec.rb[1:3:1:1] | passed | 0.00022 seconds |
+./spec/reward_system_spec.rb[1:3:2:1] | passed | 0.00149 seconds |
+./spec/reward_system_spec.rb[1:4:1:1] | passed | 0.00007 seconds |
+./spec/reward_system_spec.rb[1:4:2:1] | passed | 0.00035 seconds |
+./spec/rule_spec.rb[1:1:1]            | passed | 0.00008 seconds |
+./spec/rule_spec.rb[1:2:1:1]          | passed | 0.0001 seconds  |
+./spec/rule_spec.rb[1:2:2:1]          | passed | 0.0001 seconds  |
+./spec/rule_spec.rb[1:2:3:1]          | passed | 0.00009 seconds |
+./spec/rule_spec.rb[1:3:1:1]          | passed | 0.00101 seconds |
+./spec/rule_spec.rb[1:3:2:1]          | passed | 0.00011 seconds |
+./spec/rule_spec.rb[1:4:1]            | passed | 0.00013 seconds |
