@@ -124,13 +124,53 @@ class RewardSystem
     @rules = []
   end
 
+  def evaluate(rule, purchase)
+    condition = case rule.type
+                when 'Amount'
+                  purchase[:purchase_amount_cents] >= rule.threshold
+                when 'Duration'
+                  (Time.now - (rule.threshold * 24 * 60 * 60)) < purchase[:created_at]
+                when 'Date'
+                  purchase[:created_at].month == 5 && purchase[:created_at].day == rule.threshold
+                end
+
+    condition ? rule : nil
+  end
+
+  def declare_reward_for(rule, purchase)
+    reward = case rule.type
+             when 'Amount'
+               "#{purchase[:customer_id]} won: Next purchase free."
+             when 'Duration'
+               "#{purchase[:customer_id]} won: Twenty percent off next order."
+             when 'Date'
+               "#{purchase[:customer_id]} won: Star Wars themed item added to delivery."
+             end
+
+    puts reward
+  end
+
   def see_results
     # state = {}
     @customer_puchases.each do |purchase|
       # check and behave for previous award if any for customer
+
       # fire all rules and get winner rule
+      winner_rule = nil
+      @rules.each do |rule|
+        rule_evaluation = evaluate(rule, purchase)
+        winner_rule = rule_evaluation.nil? ? winner_rule : rule_evaluation
+      end
+
       # declare reward
+      if winner_rule.nil?
+        puts "#{purchase[:customer_id]} got nothing this time."
+      else
+        declare_reward_for(winner_rule, purchase)
+      end
       # set state and print
     end
+    puts 'Press any key to continue'
+    $stdin.gets.chomp
   end
 end
